@@ -1,0 +1,130 @@
+/* I had trouble with corrections in the original base.css file, therefore I created a new one.
+I have here tried to keep a similar structure as in the original css file. */
+
+/* The mockup I have recieved is in dark themed colours, I have chosen to do the color theming in style
+with the rest of the page though. I hope this isn't problematic, but doing a dark theme section on a light
+theme page just didn't seem right */
+#assignment {
+    background-color: #f9f9f9;
+}
+
+.assignment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* changed to padding-inline, as despite to padding - as we already have existing top and bottom margin from
+the section and only need the padding inbetween the cards. */
+.assignment-card {
+    padding-inline: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Added small hover effects to the "cards" and "icons" on hover for a dynamic effect */
+.assignment-card:hover {
+    transform: scale(1.05); /* Slightly increase size */
+}
+
+.assignment-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #4d61fc;
+    transition: color 0.1s ease;
+}
+
+.assignment-icon:hover {
+    color:#808df1;
+}
+
+.assignment-card h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+.assignment-card p {
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* "Hurtig Levering" Popup modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+  }
+  
+  .modal-content {
+    position: relative;
+    background-color: #f9f9f9;
+    margin: auto; /* auto margin all around for centering*/
+    padding: 30px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 40%; /* Could be more or less, depending on screen size */
+    height: auto;
+  }
+  
+  .close {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    color: #aaa;
+    float: inline-end;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #4d61fc;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* Countdown Styling */
+#countdown {
+    margin-block: 5px;
+    color: #4d61fc;
+    font-size: 36px;
+}
+
+#countdown-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+  /* Responsive styles - using media queries for this as done in the base file. Depending on the project
+  I might use some sort of css framework with build in responsive variables */
+@media (max-width: 768px) {
+    
+   .modal {
+    justify-content: center;
+    align-items: center;
+   }
+
+    .modal-content {
+        width: 90%; /* Adjust width for mobile */  
+        
+    }
+
+    .modal-content h3 {
+        font-size: 16px;
+    }
+    
+    .modal-content h2 {
+        font-size: 18px;
+    }
+}

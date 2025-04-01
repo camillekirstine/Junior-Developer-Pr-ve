@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopHelten - Junior Frontend Udvikler Test</title>
     <link rel="stylesheet" href="assets/base.css">
+    <link rel="stylesheet" href="assets/newstyle.css">
+
+    <!-- I am using FontAwesome for Icons, as none were provided for the given task -->
+    <script src="https://kit.fontawesome.com/f5df81b727.js" crossorigin="anonymous"></script>
    </head>
 <body>
 <header>
@@ -34,6 +38,51 @@
 
 <!-- Indsæt din løsning herunder -->
 
+<!-- Trying to keep the same type of structure through this section, as I can see in the other sections above and below -->
+
+<section id="assignment">
+    <div class="container">
+        <div class="assignment-grid">
+            <div class="assignment-card">
+                <div class="assignment-icon">
+                    <i class="fa-regular fa-flag"></i>
+                    <h3>Dansk design</h3>
+                    <p>Virksomheden er dansk design i højeste kvalitet til din virksomhed.</p>
+                </div>
+            </div>
+            <div class="assignment-card">
+                <div class="assignment-icon">
+                    <i class="fa-regular fa-star"></i>
+                    <h3>Fremragende TrustScore</h3>
+                    <p>Vores kunder vurderer os til fremragende.</p>
+                </div>
+            </div>
+            <div class="assignment-card">
+                <div class="assignment-icon">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h3>Hurtig levering</h3>
+                    <p>Vi leverer din ordre med GLS, så du hurtigt og sikkert kan modtage din pakke fra os.</p>
+                    <button id="leveringBtn" class="cta-button" onclick="hurtigLevering()">Hurtig Levering 🚀</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="popUpModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Vi sender lynhurtigt, så du får dine varer uden unødig ventetid! 📦✨<br><br></h2>
+
+        <h3>
+            ✔ Fri fragt ved køb over 999,95,-<br>
+            ✔ 30 dages returret – så du kan handle trygt 🛍️<br><br>
+        </h3>
+
+          <div id="countdown-container"></div>
+    </div>
+</div>
+ 
 
 
 
@@ -127,5 +176,10 @@
 </footer>
 
 <script src="assets/base.js" defer></script>
+
+<!-- Same as with the css file, I've chosen to make a new file to seperate my code from the existing
+just to make it easier to look through. Normally I would sort my js code into files depending on 
+the use, i.e. utility functions etc. -->
+<script src="assets/newjs.js" defer></script>
 </body>
 </html>
